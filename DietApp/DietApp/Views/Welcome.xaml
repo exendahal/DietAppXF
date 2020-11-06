@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DietApp.Views.Welcome"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:DietApp.ViewModel">
+    <ContentPage.BindingContext>
+        <viewmodels:WelcomeImageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand">
+            <StackLayout>
+                <CarouselView IndicatorView="indicatorView" ItemsSource="{Binding welcomeImages}">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Image Aspect="AspectFill" Source="{Binding img_url}" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <StackLayout Margin="10">
+                    <IndicatorView
+                        x:Name="indicatorView"
+                        HorizontalOptions="Center"
+                        IndicatorColor="LightGray"
+                        IndicatorsShape="Circle"
+                        SelectedIndicatorColor="#61D27C"
+                        VerticalOptions="EndAndExpand" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout
+                Margin="45,30"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand">
+                <Label
+                    FontSize="25"
+                    HorizontalTextAlignment="Center"
+                    Text="best tips for your diet"
+                    TextColor="Black" />
+
+                <Label
+                    FontSize="10"
+                    HorizontalTextAlignment="Center"
+                    Text="Quisque sit amet sagittis erat. Duis pharetra ornare venenatis. Nulla maximus porta velit ut molestie. Proin quis convallis mauris. In facilisis justo at mi pharetra lobortis. s."
+                    TextColor="#A5A5A5" />
+
+                <StackLayout
+                    Margin="0,50,0,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        FontSize="15"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="Skip step"
+                        TextColor="#A5A5A5"
+                        VerticalTextAlignment="Center" />
+
+                    <Frame
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="#6CC57C"
+                        CornerRadius="5"
+                        HasShadow="False">
+                        <Label
+                            Margin="40,12"
+                            FontSize="15"
+                            HorizontalOptions="StartAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="Next"
+                            TextColor="White" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
