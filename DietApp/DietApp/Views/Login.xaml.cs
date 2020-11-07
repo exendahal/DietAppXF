@@ -62,5 +62,10 @@ namespace DietApp.Views
                 passSeeIcon.Text = "\uf6cf";
             }
         }
+
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new UserInfo());
+        }
     }
 }

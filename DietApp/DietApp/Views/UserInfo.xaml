@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DietApp.Views.UserInfo"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DietApp.CustomRender"
+    BackgroundImageSource="ask">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Image
+                    Margin="0,100,0,0"
+                    Aspect="AspectFill"
+                    HeightRequest="150"
+                    HorizontalOptions="CenterAndExpand"
+                    Source="run"
+                    WidthRequest="200" />
+
+                <StackLayout
+                    Margin="0,25"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="25"
+                        HorizontalTextAlignment="Center"
+                        Text="Let's do your diet"
+                        TextColor="Black" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="25"
+                        HorizontalTextAlignment="Center"
+                        Text="katy"
+                        TextColor="#6CC57C" />
+                </StackLayout>
+
+                <Frame
+                    Margin="40,20,40,15"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="5"
+                    HasShadow="False">
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <local:CustomEntry
+                            Margin="10,3"
+                            FontSize="14"
+                            HorizontalOptions="FillAndExpand"
+                            Keyboard="Numeric"
+                            Placeholder="What is your current weight?"
+                            TextColor="Black" />
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame
+                    Margin="40,0,40,10"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="5"
+                    HasShadow="False">
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <local:CustomEntry
+                            Margin="10,3"
+                            FontSize="14"
+                            HorizontalOptions="FillAndExpand"
+                            Keyboard="Numeric"
+                            Placeholder="What is your current height?"
+                            TextColor="Black" />
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Grid Margin="40,30,40,50" VerticalOptions="EndAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="1/4 steps"
+                        TextColor="#A5A5A5"
+                        VerticalTextAlignment="Center" />
+                    <StackLayout Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="#23233C"
+                            CornerRadius="28"
+                            HasShadow="False"
+                            HeightRequest="56"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="56">
+                            <Image
+                                HeightRequest="25"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                WidthRequest="25">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}" Glyph="&#xf142;" />
+                                </Image.Source>
+                            </Image>
+                        </Frame>
+                        <Label
+                            FontSize="16"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            Text="Next"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
