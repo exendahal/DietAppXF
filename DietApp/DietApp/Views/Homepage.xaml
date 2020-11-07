@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DietApp.Views.Homepage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="home"
+    BackgroundImageSource="Homescreen">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="25,90,25,0" Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="25"
+                            HorizontalTextAlignment="Center"
+                            Text="Activity"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+
+                        <Label
+                            Margin="5"
+                            FontFamily="MaterialFontFamily"
+                            FontSize="30"
+                            HorizontalTextAlignment="Center"
+                            Text="&#xf140;"
+                            TextColor="Black"
+                            VerticalOptions="EndAndExpand"
+                            VerticalTextAlignment="End" />
+                    </StackLayout>
+                    <Label
+                        FontSize="12"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End"
+                        Text="Today, 2 october 2020"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+
+                </StackLayout>
+
+                <StackLayout>
+                    <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
+                        <StackLayout
+                            x:Name="listing"
+                            Margin="10,0"
+                            Orientation="Horizontal">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame
+                                        Margin="10,10,0,10"
+                                        Padding="0"
+                                        BackgroundColor="White"
+                                        CornerRadius="12"
+                                        HasShadow="False">
+                                        <StackLayout>
+                                            <Label
+                                                Margin="15,15,15,10"
+                                                FontFamily="Bold"
+                                                FontSize="16"
+                                                HorizontalTextAlignment="Center"
+                                                Text="Results of the week"
+                                                TextColor="Black" />
+                                            <StackLayout
+                                                Margin="15,0"
+                                                HorizontalOptions="FillAndExpand"
+                                                Orientation="Horizontal">
+                                                <StackLayout Margin="15,0">
+                                                    <Label
+                                                        FontFamily="Regular"
+                                                        FontSize="10"
+                                                        HorizontalTextAlignment="Center"
+                                                        Text="Results of the week"
+                                                        TextColor="Black" />
+
+                                                    <Label
+                                                        FontFamily="Bold"
+                                                        FontSize="15"
+                                                        HorizontalTextAlignment="Center"
+                                                        Text="-4kg"
+                                                        TextColor="#6CC57C" />
+                                                </StackLayout>
+
+                                                <StackLayout Margin="15,0">
+                                                    <Label
+                                                        FontFamily="Regular"
+                                                        FontSize="10"
+                                                        HorizontalTextAlignment="Center"
+                                                        Text="you level up"
+                                                        TextColor="Black" />
+
+                                                    <Label
+                                                        FontFamily="Bold"
+                                                        FontSize="15"
+                                                        HorizontalTextAlignment="Center"
+                                                        Text="Level 8"
+                                                        TextColor="#6CC57C" />
+                                                </StackLayout>
+
+                                                <Ellipse
+                                                    Fill="Transparent"
+                                                    HeightRequest="65"
+                                                    HorizontalOptions="Center"
+                                                    Stroke="#6CC57C"
+                                                    StrokeThickness="4"
+                                                    WidthRequest="65" />
+
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                                                <Label
+                                                    FontFamily="Regular"
+                                                    FontSize="10"
+                                                    HorizontalTextAlignment="Center"
+                                                    Text="Never give up,"
+                                                    TextColor="Black" />
+
+                                                <Label
+                                                    FontFamily="Regular"
+                                                    FontSize="10"
+                                                    HorizontalTextAlignment="Center"
+                                                    Text=" know more"
+                                                    TextColor="#6CC57C" />
+                                            </StackLayout>
+
+                                            <StackLayout HorizontalOptions="StartAndExpand">
+                                                <Frame
+                                                    Margin="0"
+                                                    Padding="0"
+                                                    CornerRadius="18"
+                                                    HasShadow="True"
+                                                    HeightRequest="36"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    WidthRequest="36">
+                                                    <Label
+                                                        FontFamily="MaterialFontFamily"
+                                                        FontSize="25"
+                                                        HorizontalTextAlignment="Center"
+                                                        Text="&#xf054;"
+                                                        TextColor="Black"
+                                                        VerticalOptions="Center"
+                                                        VerticalTextAlignment="Center" />
+                                                </Frame>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
+                    </ScrollView>
+
+
+
+                </StackLayout>
+
+                <StackLayout
+                    Margin="20,5"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal">
+                    <Frame
+                        x:Name="tab_1"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="#6CC57C"
+                        HasShadow="False"
+                        HeightRequest="40"
+                        HorizontalOptions="FillAndExpand">
+                        <Label
+                            x:Name="lvl_1"
+                            Margin="20,7"
+                            FontFamily="Regular"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Breakfast"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Frame
+                        x:Name="tab_2"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="40"
+                        HorizontalOptions="FillAndExpand">
+                        <Label
+                            x:Name="lvl_2"
+                            Margin="20,7"
+                            FontFamily="Regular"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Foods"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Frame
+                        x:Name="tab_3"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="40"
+                        HorizontalOptions="FillAndExpand">
+                        <Label
+                            x:Name="lvl_3"
+                            Margin="20,7"
+                            FontFamily="Regular"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Dinner"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

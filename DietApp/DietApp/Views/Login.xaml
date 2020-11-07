@@ -13,6 +13,7 @@
                 VerticalOptions="CenterAndExpand">
                 <Label
                     FontAttributes="Bold"
+                    FontFamily="Bold"
                     FontSize="35"
                     HorizontalTextAlignment="Center"
                     Text="Welcome"
@@ -28,6 +29,7 @@
                         <local:CustomEntry
                             x:Name="emailAddress"
                             Margin="10,0,10,0"
+                            FontFamily="Regular"
                             HorizontalOptions="FillAndExpand"
                             Placeholder="Email Address"
                             TextChanged="CustomEntry_TextChanged"
@@ -36,7 +38,7 @@
                         <Label
                             x:Name="checkIcon"
                             Margin="10"
-                            FontFamily="{StaticResource MaterialFontFamily}"
+                            FontFamily="MaterialFontFamily"
                             FontSize="17"
                             Text="&#xf133;"
                             TextColor="Transparent"
@@ -55,6 +57,7 @@
                         <local:CustomEntry
                             x:Name="password"
                             Margin="10,0,10,0"
+                            FontFamily="Regular"
                             HorizontalOptions="FillAndExpand"
                             IsPassword="True"
                             Placeholder="Password"
@@ -67,7 +70,7 @@
                             WidthRequest="20">
                             <Label
                                 x:Name="passSeeIcon"
-                                FontFamily="{StaticResource MaterialFontFamily}"
+                                FontFamily="MaterialFontFamily"
                                 FontSize="17"
                                 Text="&#xf6cf;"
                                 TextColor="#707070"
@@ -83,6 +86,7 @@
 
 
                 <Label
+                    FontFamily="Regular"
                     FontSize="13"
                     HorizontalOptions="CenterAndExpand"
                     HorizontalTextAlignment="Center"
@@ -99,6 +103,7 @@
                     HorizontalOptions="FillAndExpand">
                     <Label
                         Margin="15"
+                        FontFamily="Regular"
                         FontSize="15"
                         HorizontalOptions="CenterAndExpand"
                         HorizontalTextAlignment="Center"

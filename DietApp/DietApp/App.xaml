@@ -4,10 +4,24 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
-        <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+        <!--<OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Material Design Icons" />
             <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
-            <On Platform="UWP" Value="Assets/Fonts/materialdesignicons-webfont.ttf#Material Design Icons" />
         </OnPlatform>
+
+        <OnPlatform x:Key="Regular" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="GoogleSans-Regular" />
+            <On Platform="Android" Value="GoogleSans-Regular.ttf#" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="Bold" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="GoogleSansBold" />
+            <On Platform="Android" Value="GoogleSansBold.ttf#" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="Medium" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="GoogleSans-Medium" />
+            <On Platform="Android" Value="GoogleSans-Medium#" />
+        </OnPlatform>-->
     </Application.Resources>
 </Application>

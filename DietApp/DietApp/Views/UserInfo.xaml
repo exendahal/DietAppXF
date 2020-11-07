@@ -21,14 +21,14 @@
                     HorizontalOptions="Center"
                     Orientation="Horizontal">
                     <Label
-                        FontAttributes="Bold"
+                        FontFamily="Bold"
                         FontSize="25"
                         HorizontalTextAlignment="Center"
                         Text="Let's do your diet"
                         TextColor="Black" />
 
                     <Label
-                        FontAttributes="Bold"
+                        FontFamily="Bold"
                         FontSize="25"
                         HorizontalTextAlignment="Center"
                         Text="katy"
@@ -44,6 +44,7 @@
                     <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                         <local:CustomEntry
                             Margin="10,3"
+                            FontFamily="Regular"
                             FontSize="14"
                             HorizontalOptions="FillAndExpand"
                             Keyboard="Numeric"
@@ -63,6 +64,7 @@
                     <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                         <local:CustomEntry
                             Margin="10,3"
+                            FontFamily="Regular"
                             FontSize="14"
                             HorizontalOptions="FillAndExpand"
                             Keyboard="Numeric"
@@ -84,6 +86,7 @@
                     </Grid.ColumnDefinitions>
                     <Label
                         Grid.Column="0"
+                        FontFamily="Regular"
                         FontSize="16"
                         HorizontalOptions="StartAndExpand"
                         HorizontalTextAlignment="Center"
@@ -106,11 +109,15 @@
                                 VerticalOptions="Center"
                                 WidthRequest="25">
                                 <Image.Source>
-                                    <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}" Glyph="&#xf142;" />
+                                    <FontImageSource FontFamily="MaterialFontFamily" Glyph="&#xf142;" />
                                 </Image.Source>
                             </Image>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                         <Label
+                            FontFamily="Regular"
                             FontSize="16"
                             HorizontalOptions="Center"
                             HorizontalTextAlignment="Center"

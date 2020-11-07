@@ -35,12 +35,14 @@
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="EndAndExpand">
                 <Label
+                    FontFamily="Bold"
                     FontSize="25"
                     HorizontalTextAlignment="Center"
                     Text="best tips for your diet"
                     TextColor="Black" />
 
                 <Label
+                    FontFamily="Regular"
                     FontSize="10"
                     HorizontalTextAlignment="Center"
                     Text="Quisque sit amet sagittis erat. Duis pharetra ornare venenatis. Nulla maximus porta velit ut molestie. Proin quis convallis mauris. In facilisis justo at mi pharetra lobortis. s."
@@ -51,6 +53,7 @@
                     Orientation="Horizontal"
                     VerticalOptions="CenterAndExpand">
                     <Label
+                        FontFamily="Regular"
                         FontSize="15"
                         HorizontalOptions="StartAndExpand"
                         HorizontalTextAlignment="Center"
@@ -66,6 +69,7 @@
                         HasShadow="False">
                         <Label
                             Margin="40,12"
+                            FontFamily="Regular"
                             FontSize="15"
                             HorizontalOptions="StartAndExpand"
                             HorizontalTextAlignment="Center"

@@ -16,5 +16,10 @@ namespace DietApp.Views
         {
             InitializeComponent();
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new Homepage());
+        }
     }
 }
