@@ -25,9 +25,21 @@
                 HasShadow="False">
                 <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                     <local:CustomEntry
+                        x:Name="emailAddress"
                         Margin="10,0,10,0"
+                        HorizontalOptions="FillAndExpand"
                         Placeholder="Email Address"
+                        TextChanged="CustomEntry_TextChanged"
                         TextColor="Black" />
+
+                    <Label
+                        x:Name="checkIcon"
+                        Margin="10"
+                        FontFamily="{StaticResource MaterialFontFamily}"
+                        FontSize="17"
+                        Text="&#xf133;"
+                        TextColor="Transparent"
+                        VerticalTextAlignment="Center" />
                 </StackLayout>
 
             </Frame>
@@ -40,13 +52,34 @@
                 HasShadow="False">
                 <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                     <local:CustomEntry
+                        x:Name="password"
                         Margin="10,0,10,0"
+                        HorizontalOptions="FillAndExpand"
                         IsPassword="True"
                         Placeholder="Password"
                         TextColor="Black" />
+                    <Frame
+                        Margin="10,0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HeightRequest="20"
+                        WidthRequest="20">
+                        <Label
+                            x:Name="passSeeIcon"
+                            FontFamily="{StaticResource MaterialFontFamily}"
+                            FontSize="17"
+                            Text="&#xf6cf;"
+                            TextColor="#707070"
+                            VerticalTextAlignment="Center" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
                 </StackLayout>
 
             </Frame>
+
 
             <Label
                 FontSize="13"
