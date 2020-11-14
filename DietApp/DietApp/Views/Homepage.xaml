@@ -3,12 +3,18 @@
     x:Class="DietApp.Views.Homepage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Name="home"
-    BackgroundImageSource="Homescreen">
+    xmlns:controls="clr-namespace:DietApp"
+    x:Name="home">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <StackLayout Margin="25,90,25,0" Orientation="Horizontal">
+                <Path
+                    Aspect="Fill"
+                    Data="m171.44347,98.16175l212.99998,0l0,63.35922c-106.49999,0 -145.49999,-124.85898 -212.99998,10.42453l0,-73.78375z"
+                    Fill="#6CC57C"
+                    HeightRequest="50"
+                    Stroke="#6CC57C" />
+                <StackLayout Margin="25,0,25,0" Orientation="Horizontal">
                     <StackLayout Orientation="Horizontal">
                         <Label
                             FontAttributes="Bold"
@@ -96,13 +102,22 @@
                                                         TextColor="#6CC57C" />
                                                 </StackLayout>
 
-                                                <Ellipse
-                                                    Fill="Transparent"
-                                                    HeightRequest="65"
-                                                    HorizontalOptions="Center"
-                                                    Stroke="#6CC57C"
-                                                    StrokeThickness="4"
-                                                    WidthRequest="65" />
+                                                <StackLayout Padding="10">
+                                                    <controls:CircleProgressBar
+                                                        HorizontalOptions="Center"
+                                                        Maximum="10"
+                                                        Minimum="0"
+                                                        ProgressColor="Aqua"
+                                                        TextColor="Gray"
+                                                        Value="{Binding Source={x:Reference Slider}, Path=Value}" />
+                                                    <Slider
+                                                        x:Name="Slider"
+                                                        Maximum="10"
+                                                        MaximumTrackColor="Black"
+                                                        Minimum="0"
+                                                        MinimumTrackColor="Blue"
+                                                        Value="5" />
+                                                </StackLayout>
 
                                             </StackLayout>
                                             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">

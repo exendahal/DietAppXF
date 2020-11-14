@@ -3,172 +3,194 @@
     x:Class="DietApp.Views.Login"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:DietApp.CustomRender"
-    BackgroundImageSource="login">
+    xmlns:local="clr-namespace:DietApp.CustomRender">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout
-                Margin="40"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="CenterAndExpand">
-                <Label
-                    FontAttributes="Bold"
-                    FontFamily="Bold"
-                    FontSize="35"
-                    HorizontalTextAlignment="Center"
-                    Text="Welcome"
-                    TextColor="Black" />
+            <StackLayout>
+                <Path
+                    Aspect="Fill"
+                    Data="m171.44347,98.16175l212.99998,0l0,63.35922c-106.49999,0 -145.49999,-124.85898 -212.99998,10.42453l0,-73.78375z"
+                    Fill="#6CC57C"
+                    HeightRequest="100"
+                    Stroke="#6CC57C" />
 
-                <Frame
-                    Margin="0,30,0,15"
-                    Padding="0"
-                    BackgroundColor="White"
-                    CornerRadius="5"
-                    HasShadow="False">
-                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                        <local:CustomEntry
-                            x:Name="emailAddress"
-                            Margin="10,0,10,0"
-                            FontFamily="Regular"
-                            HorizontalOptions="FillAndExpand"
-                            Placeholder="Email Address"
-                            TextChanged="CustomEntry_TextChanged"
-                            TextColor="Black" />
+                <StackLayout
+                    Margin="40,10"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand">
 
-                        <Label
-                            x:Name="checkIcon"
-                            Margin="10"
-                            FontFamily="MaterialFontFamily"
-                            FontSize="17"
-                            Text="&#xf133;"
-                            TextColor="Transparent"
-                            VerticalTextAlignment="Center" />
-                    </StackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="Bold"
+                        FontSize="35"
+                        HorizontalTextAlignment="Center"
+                        Text="Welcome"
+                        TextColor="Black" />
 
-                </Frame>
+                    <Frame
+                        Margin="0,30,0,15"
+                        Padding="0"
+                        BackgroundColor="White"
+                        CornerRadius="5"
+                        HasShadow="False">
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                            <local:CustomEntry
+                                x:Name="emailAddress"
+                                Margin="10,0,10,0"
+                                FontFamily="Regular"
+                                HorizontalOptions="FillAndExpand"
+                                Placeholder="Email Address"
+                                TextChanged="CustomEntry_TextChanged"
+                                TextColor="Black" />
 
-                <Frame
-                    Margin="0,10,0,15"
-                    Padding="0"
-                    BackgroundColor="White"
-                    CornerRadius="5"
-                    HasShadow="False">
-                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                        <local:CustomEntry
-                            x:Name="password"
-                            Margin="10,0,10,0"
-                            FontFamily="Regular"
-                            HorizontalOptions="FillAndExpand"
-                            IsPassword="True"
-                            Placeholder="Password"
-                            TextColor="Black" />
-                        <Frame
-                            Margin="10,0"
-                            Padding="0"
-                            BackgroundColor="Transparent"
-                            HeightRequest="20"
-                            WidthRequest="20">
                             <Label
-                                x:Name="passSeeIcon"
+                                x:Name="checkIcon"
+                                Margin="10"
                                 FontFamily="MaterialFontFamily"
                                 FontSize="17"
-                                Text="&#xf6cf;"
-                                TextColor="#707070"
+                                Text="&#xf133;"
+                                TextColor="Transparent"
                                 VerticalTextAlignment="Center" />
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                            </Frame.GestureRecognizers>
-                        </Frame>
+                        </StackLayout>
 
-                    </StackLayout>
+                    </Frame>
 
-                </Frame>
+                    <Frame
+                        Margin="0,10,0,15"
+                        Padding="0"
+                        BackgroundColor="White"
+                        CornerRadius="5"
+                        HasShadow="False">
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                            <local:CustomEntry
+                                x:Name="password"
+                                Margin="10,0,10,0"
+                                FontFamily="Regular"
+                                HorizontalOptions="FillAndExpand"
+                                IsPassword="True"
+                                Placeholder="Password"
+                                TextColor="Black" />
+                            <Frame
+                                Margin="10,0"
+                                Padding="0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                WidthRequest="20">
+                                <Label
+                                    x:Name="passSeeIcon"
+                                    FontFamily="MaterialFontFamily"
+                                    FontSize="17"
+                                    Text="&#xf6cf;"
+                                    TextColor="#707070"
+                                    VerticalTextAlignment="Center" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+
+                        </StackLayout>
+
+                    </Frame>
 
 
-                <Label
-                    FontFamily="Regular"
-                    FontSize="13"
-                    HorizontalOptions="CenterAndExpand"
-                    HorizontalTextAlignment="Center"
-                    Text="Forgot you password?"
-                    TextColor="#A5A5A5"
-                    VerticalTextAlignment="Center" />
-
-                <Frame
-                    Margin="0,20"
-                    Padding="0"
-                    BackgroundColor="#23233C"
-                    CornerRadius="18"
-                    HasShadow="False"
-                    HorizontalOptions="FillAndExpand">
                     <Label
-                        Margin="15"
                         FontFamily="Regular"
-                        FontSize="15"
+                        FontSize="13"
                         HorizontalOptions="CenterAndExpand"
                         HorizontalTextAlignment="Center"
-                        Text="Next"
-                        TextColor="White" />
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
-                    </Frame.GestureRecognizers>
+                        Text="Forgot you password?"
+                        TextColor="#A5A5A5"
+                        VerticalTextAlignment="Center" />
 
-                </Frame>
-
-                <Label
-                    FontSize="13"
-                    HorizontalOptions="CenterAndExpand"
-                    HorizontalTextAlignment="Center"
-                    TextColor="#A5A5A5"
-                    TextType="Html">
-                    <![CDATA[Don't have an account? <strong style="color:red">sign up</strong>.]]>
-                </Label>
-                <StackLayout
-                    Margin="0,20"
-                    HorizontalOptions="CenterAndExpand"
-                    Orientation="Horizontal">
                     <Frame
-                        Margin="5"
+                        Margin="0,20"
                         Padding="0"
-                        BackgroundColor="White"
-                        CornerRadius="10"
+                        BackgroundColor="#23233C"
+                        CornerRadius="18"
                         HasShadow="False"
-                        HeightRequest="50"
-                        HorizontalOptions="FillAndExpand"
-                        WidthRequest="80">
-                        <Image
-                            Margin="10"
-                            Aspect="AspectFill"
-                            HeightRequest="24"
-                            HorizontalOptions="Center"
-                            Source="facebook"
-                            VerticalOptions="Center"
-                            WidthRequest="12" />
+                        HorizontalOptions="FillAndExpand">
+                        <Label
+                            Margin="15"
+                            FontFamily="Regular"
+                            FontSize="15"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="Next"
+                            TextColor="White" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                        </Frame.GestureRecognizers>
 
                     </Frame>
 
-                    <Frame
-                        Margin="5"
-                        Padding="0"
-                        BackgroundColor="White"
-                        CornerRadius="10"
-                        HasShadow="False"
-                        HeightRequest="50"
-                        HorizontalOptions="FillAndExpand"
-                        WidthRequest="80">
-                        <Image
-                            Margin="10"
-                            Aspect="AspectFill"
-                            HeightRequest="24"
-                            HorizontalOptions="Center"
-                            Source="search"
-                            VerticalOptions="Center"
-                            WidthRequest="25" />
+                    <Label
+                        FontSize="13"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        TextColor="#A5A5A5"
+                        TextType="Html">
+                        <![CDATA[Don't have an account? <strong style="color:red">sign up</strong>.]]>
+                    </Label>
 
-                    </Frame>
+                    <StackLayout
+                        Margin="0,20,0,10"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <Frame
+                            Margin="5"
+                            Padding="0"
+                            BackgroundColor="White"
+                            CornerRadius="10"
+                            HasShadow="False"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            WidthRequest="80">
+                            <Image
+                                Margin="10"
+                                Aspect="AspectFill"
+                                HeightRequest="24"
+                                HorizontalOptions="Center"
+                                Source="facebook"
+                                VerticalOptions="Center"
+                                WidthRequest="12" />
+
+                        </Frame>
+
+                        <Frame
+                            Margin="5"
+                            Padding="0"
+                            BackgroundColor="White"
+                            CornerRadius="10"
+                            HasShadow="False"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            WidthRequest="80">
+                            <Image
+                                Margin="10"
+                                Aspect="AspectFill"
+                                HeightRequest="24"
+                                HorizontalOptions="Center"
+                                Source="search"
+                                VerticalOptions="Center"
+                                WidthRequest="25" />
+
+                        </Frame>
+                    </StackLayout>
+
                 </StackLayout>
 
+                <Path
+                    Aspect="Fill"
+                    Data="m251.04351,295.99674l276.00001,0l0,-59.78837c-145.00001,-29.63278 -150.00001,78.54453 -277.00001,27.44294l1,32.34543z"
+                    Fill="#6CC57C"
+                    HeightRequest="100"
+                    Stroke="#6CC57C">
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="0" />
+                    </Path.RenderTransform>
+                </Path>
             </StackLayout>
+
         </ScrollView>
 
     </ContentPage.Content>

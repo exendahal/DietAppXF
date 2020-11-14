@@ -3,13 +3,18 @@
     x:Class="DietApp.Views.UserInfo"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:DietApp.CustomRender"
-    BackgroundImageSource="ask">
+    xmlns:local="clr-namespace:DietApp.CustomRender">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout VerticalOptions="FillAndExpand">
+                <Path
+                    Aspect="Fill"
+                    Data="m171.44347,98.16175l212.99998,0l0,63.35922c-106.49999,0 -145.49999,-124.85898 -212.99998,10.42453l0,-73.78375z"
+                    Fill="#6CC57C"
+                    HeightRequest="100"
+                    Stroke="#6CC57C" />
                 <Image
-                    Margin="0,100,0,0"
+                    Margin="0,10,0,0"
                     Aspect="AspectFill"
                     HeightRequest="150"
                     HorizontalOptions="CenterAndExpand"
