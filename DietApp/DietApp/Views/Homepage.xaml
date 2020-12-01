@@ -7,7 +7,7 @@
     x:Name="home">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout Margin="-1">
                 <Path
                     Aspect="Fill"
                     Data="m171.44347,98.16175l212.99998,0l0,63.35922c-106.49999,0 -145.49999,-124.85898 -212.99998,10.42453l0,-73.78375z"
